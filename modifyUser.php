@@ -17,7 +17,7 @@
 				headers: {
 			         'Authorization' : sessionStorage.getItem('token')
 			        },
-				url: 'http://localhost:8888/alexMiglioreAPIFinal/public/index.php/users/modifyUserAdmin.json',
+				url: 'http://81.169.234.32/diego/projectoPHP/public/index.php/usuario/modify.json',
 				dataType: 'json',
 				type: 'POST',
 				data: {

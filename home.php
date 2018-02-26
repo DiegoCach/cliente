@@ -22,7 +22,7 @@
       var rol = $("#rol option:selected").val();
       //alert(rol)
       $.ajax({
-        url: 'http://localhost:8888/alexMiglioreAPIFinal/public/index.php/users/create.json',
+        url: 'http://81.169.234.32/diego/projectoPHP/public/index.php/usuario/create.json',
         dataType: 'json',
         type: 'POST',
         data: {
@@ -31,6 +31,15 @@
           'passwordRepeat': password,
           'email': email,
           'rol': rol,
+          'x': 0,
+          'y': 0,
+          'id_device': 0,
+          'profile_photo': "sdfsdf",
+          'birthday': "01/02/1990",
+          'city': "madrid",
+          'description': "dsdsa",
+          'id_privacity': 1
+
         },
         success:function(data){
           if (data.code == '200') 
@@ -58,7 +67,7 @@
           headers: {
           'Authorization' : sessionStorage.getItem('token')
          },
-          url: 'http://localhost:8888/alexMiglioreAPIFinal/public/index.php/users/deleteUser.json',
+          url: 'http://81.169.234.32/diego/projectoPHP/public/index.php/usuario/deleteUser.json',
           dataType: 'json',
           type: 'POST',
           data: {
@@ -103,7 +112,7 @@
         headers: {
          'Authorization' : sessionStorage.getItem('token')
         },
-        url: 'http://localhost:8888/alexMiglioreAPIFinal/public/index.php/users/users.json',
+        url: 'http://81.169.234.32/diego/projectoPHP/public/index.php/usuario/Users.json',
         dataType: 'json',
         type: 'GET',
         data: {
@@ -124,7 +133,7 @@
       function cambia_de_pagina(id){
           sessionStorage.setItem('id', id);
          // alert("Cambio de pagina");
-          location.href="http://localhost:8888/AlexMiglioreAPIMusicaCliente/modifyUser.php"
+          location.href="http://81.169.234.32/diego/cliente/modifyUser.php"
       }
       </script>
 

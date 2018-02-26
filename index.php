@@ -12,7 +12,7 @@
       var password = $(".password").val();
       e.preventDefault();
       $.ajax({
-        url: 'http://localhost:8888/alexMiglioreAPIFinal/public/index.php/users/login.json',
+        url: 'http://81.169.234.32/diego/projectoPHP/public/index.php/usuario/login.json',
         dataType: 'json',
         type: 'GET',
         data: {
